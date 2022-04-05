@@ -1,28 +1,17 @@
-name: Sast 
+name: Sca 
 on: 
   push: 
     branches: [ master ] 
   pull_request: 
     branches: [ master ] 
-jobs:
-  depchecktest:
-    runs-on: ubuntu-latest
-    name: depecheck_test
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Depcheck
-        uses: dependency-check/Dependency-Check_Action@main
-        id: Depcheck
-        with:
-          project: 'test'
-          path: '.'
-          format: 'HTML'    
-          args: >
-            --failOnCVSS 7
-            --enableRetired
-      - name: Upload Test results
-        uses: actions/upload-artifact@master
-        with:
-           name: Depcheck report
-           path: ${{github.workspace}}/reports
+jobs: 
+  brakeman: 
+    runs-on: ubuntu-latest 
+    name: bundler scan 
+    steps: 
+    - name: Checkout the code 
+      uses: actions/checkout@v2
+    - name: Install the bundler audit  
+      run : | 
+           gem install bundler-audit
+           bundle-audit
