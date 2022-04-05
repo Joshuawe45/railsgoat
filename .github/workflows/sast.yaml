@@ -1,0 +1,17 @@
+name: Sast 
+on: 
+  push: 
+    branches: [ master ] 
+  pull_request: 
+    branches: [ master ] 
+jobs: 
+  brakeman: 
+    runs-on: ubuntu-latest 
+    name: brakeman-scan 
+    steps: 
+    - name: Checkout the code 
+      uses: actions/checkout@v2
+    - name: Brakeman-scan  
+      uses: artplan1/brakeman-action@v1.2.1
+      with:
+       flags: "--color"
