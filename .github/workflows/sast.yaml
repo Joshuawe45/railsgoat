@@ -1,17 +1,18 @@
-name: Sca 
+name: DAST 
 on: 
   push: 
     branches: [ master ] 
   pull_request: 
     branches: [ master ] 
 jobs: 
-  brakeman: 
+  dast: 
     runs-on: ubuntu-latest 
     name: bundler scan 
     steps: 
     - name: Checkout the code 
       uses: actions/checkout@v2
-    - name: Install the bundler audit  
+    - name: Run the application 
       run : | 
-           sudo gem install bundler-audit
-           bundle-audit
+            docker-compose build
+            docker-compose run web rails db:setup
+            docker-compose up -d 
