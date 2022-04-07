@@ -1,0 +1,18 @@
+1649220163323	geckodriver	INFO	Listening on 127.0.0.1:52431
+1649220163670	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "52432" "-foreground" "-no-remote" "-profile" "/var/folders/xm/b0_ghgg92k9fl8bz4vfcpsfr0000gp/T/rust_mozprofileDFZeru"
+1649220164470	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/xm/b0_ghgg92k9fl8bz4vfcpsfr0000gp/T/rust_mozprofileDFZeru/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+DevTools listening on ws://localhost:52432/devtools/browser/dc7c1b47-5492-453e-bf94-332c03cec7a4
+1649220166787	Marionette	INFO	Listening on port 52439
+1649220166892	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+Marionette threw an error: TypeError: browsingContext.currentWindowGlobal is null
+getMarionetteCommandsActorProxy/get/<@chrome://remote/content/marionette/actors/MarionetteCommandsParent.jsm:332:29
+
+1649220674883	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, reason: error
+1649249455592	Marionette	INFO	Stopped listening on port 52439
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+

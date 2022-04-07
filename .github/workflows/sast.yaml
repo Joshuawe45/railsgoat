@@ -1,18 +1,20 @@
-name: DAST 
+name: container-scanning 
 on: 
   push: 
     branches: [ master ] 
   pull_request: 
     branches: [ master ] 
 jobs: 
-  dast: 
+  container-scanning: 
     runs-on: ubuntu-latest 
-    name: bundler scan 
+    name: container scanning 
     steps: 
     - name: Checkout the code 
       uses: actions/checkout@v2
-    - name: Run the application 
+    - name: SCAN the application 
       run : | 
-            docker-compose build
-            docker-compose run web rails db:setup
-            docker-compose up -d 
+              cd $GITHUB_WORKSPACE 
+              docker build -t test . 
+              curl -sfL  https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh  | sh -s -- -b /usr/local/bin v0.21.3 
+              trivy image test 
+        
