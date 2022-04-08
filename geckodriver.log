@@ -16,3 +16,99 @@ console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkErr
 
 ###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
 
+1649330019327	geckodriver	INFO	Listening on 127.0.0.1:61421
+1649330019831	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "61422" "-foreground" "-no-remote" "-profile" "/var/folders/xm/b0_ghgg92k9fl8bz4vfcpsfr0000gp/T/rust_mozprofileOT6m1R"
+1649330020555	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/xm/b0_ghgg92k9fl8bz4vfcpsfr0000gp/T/rust_mozprofileOT6m1R/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+DevTools listening on ws://localhost:61422/devtools/browser/1238a7dd-4b06-49c5-ae20-43eefb168ec9
+1649330022531	Marionette	INFO	Listening on port 61429
+1649330022631	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1649330526129	geckodriver	INFO	Listening on 127.0.0.1:63490
+1649330526642	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "63491" "-foreground" "-no-remote" "-profile" "/var/folders/xm/b0_ghgg92k9fl8bz4vfcpsfr0000gp/T/rust_mozprofiledTjyhE"
+1649330527269	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/xm/b0_ghgg92k9fl8bz4vfcpsfr0000gp/T/rust_mozprofiledTjyhE/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+DevTools listening on ws://localhost:63491/devtools/browser/68c6dfb2-eda6-4a08-ade9-dc8cc38c7094
+1649330529501	Marionette	INFO	Listening on port 63502
+1649330529535	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:3000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:3000"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649330573826	geckodriver	INFO	Listening on 127.0.0.1:63810
+1649330574346	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "63811" "-foreground" "-no-remote" "-profile" "/var/folders/xm/b0_ghgg92k9fl8bz4vfcpsfr0000gp/T/rust_mozprofile1OPCMd"
+1649330574835	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/xm/b0_ghgg92k9fl8bz4vfcpsfr0000gp/T/rust_mozprofile1OPCMd/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+DevTools listening on ws://localhost:63811/devtools/browser/14f9e2f7-78c5-4faf-88e1-9b453c4b004f
+1649330576694	Marionette	INFO	Listening on port 63818
+1649330576718	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:3000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:3000"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649330629399	geckodriver	INFO	Listening on 127.0.0.1:64160
+1649330629919	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "64161" "-foreground" "-no-remote" "-profile" "/var/folders/xm/b0_ghgg92k9fl8bz4vfcpsfr0000gp/T/rust_mozprofileUNQKXF"
+1649330630490	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/xm/b0_ghgg92k9fl8bz4vfcpsfr0000gp/T/rust_mozprofileUNQKXF/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+DevTools listening on ws://localhost:64161/devtools/browser/48862b68-0a3e-4370-ad8f-7cfd595bf6b2
+1649330632322	Marionette	INFO	Listening on port 64173
+1649330632394	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:3000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:3000"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1649330800921	geckodriver	INFO	Listening on 127.0.0.1:65067
+1649330801431	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "65068" "-foreground" "-no-remote" "-profile" "/var/folders/xm/b0_ghgg92k9fl8bz4vfcpsfr0000gp/T/rust_mozprofileOesWGb"
+1649330801996	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/xm/b0_ghgg92k9fl8bz4vfcpsfr0000gp/T/rust_mozprofileOesWGb/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+DevTools listening on ws://localhost:65068/devtools/browser/a1e6fbe7-e24f-465f-a397-e347604c788e
+1649330803733	Marionette	INFO	Listening on port 65080
+1649330803816	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+1649331140788	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, reason: error
+1649331311994	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, reason: error
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+1649331900559	geckodriver	INFO	Listening on 127.0.0.1:54187
+1649331901073	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "54188" "-foreground" "-no-remote" "-profile" "/var/folders/xm/b0_ghgg92k9fl8bz4vfcpsfr0000gp/T/rust_mozprofiletTKUkO"
+1649331901626	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/xm/b0_ghgg92k9fl8bz4vfcpsfr0000gp/T/rust_mozprofiletTKUkO/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+DevTools listening on ws://localhost:54188/devtools/browser/0ab9a8ee-9071-4b8a-ad42-c2f8ef75a78d
+1649331903323	Marionette	INFO	Listening on port 54200
+1649331903353	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:3000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:3000"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+1649393894161	Marionette	INFO	Stopped listening on port 64173
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1649393897629	Marionette	INFO	Stopped listening on port 65080
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1649393900862	Marionette	INFO	Stopped listening on port 54200
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
