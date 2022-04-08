@@ -16,7 +16,7 @@ jobs:
               cd $GITHUB_WORKSPACE 
               docker build -t test . 
               curl -sfL  https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh  | sh -s -- -b /usr/local/bin v0.21.3 
-              trivy image ghcr.io/joshuawe45/rails-app:latest >> /tmp/trivy || true 
+              trivy image test >> /tmp/trivy || true 
     - uses: actions/upload-artifact@v3
       with:
          name: my-artifact
@@ -24,7 +24,7 @@ jobs:
 
     - name: docker-scan 
       run : | 
-              docker scan ghcr.io/joshuawe45/rails-app:latest >> /tmp/scan || true 
+              docker scan test >> /tmp/scan || true 
     - uses: actions/upload-artifact@v3
       with:
          name: my-artifact
