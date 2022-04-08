@@ -14,4 +14,4 @@ jobs:
     - name: Brakeman-scan  
       uses: artplan1/brakeman-action@v1.2.1
       with:
-       flags: "--o output.json || true"
+       flags: "-o output.json || true"
