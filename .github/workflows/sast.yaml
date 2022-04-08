@@ -1,24 +1,21 @@
-name: Dockerfile scanning 
+name: Docker build 
 on: 
   push: 
     branches: [ master ] 
   pull_request: 
     branches: [ master ] 
 jobs: 
-  container-scanning: 
+  docker-build: 
     runs-on: ubuntu-latest 
-    name: dockerfile  scanning 
+    name: Build 
     steps: 
     - name: Checkout the code 
       uses: actions/checkout@v2
-    - name: SCAN the Dockerfile 
-      run : | 
-              cd $GITHUB_WORKSPACE 
-              sudo wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64
-              sudo chmod +x /bin/hadolint
-              hadolint Dockerfile > /tmp/output || true 
-    - uses: actions/upload-artifact@v3
+    - name: 'Build:dockerimage'
+      uses: docker/build-push-action@v1
       with:
-         name: my-artifact
-         path: /tmp/output # or path/to/artifact
-
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+          repository: joshua/rails-app 
+          tags: latest
