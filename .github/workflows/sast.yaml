@@ -1,31 +1,17 @@
-name: container-scanning 
+name: Sast 
 on: 
   push: 
     branches: [ master ] 
   pull_request: 
     branches: [ master ] 
 jobs: 
-  container-scanning: 
+  brakeman: 
     runs-on: ubuntu-latest 
-    name: container scanning 
+    name: brakeman-scan 
     steps: 
     - name: Checkout the code 
       uses: actions/checkout@v2
-    - name: Run Trivy vulnerability scanner
-      run : |  
-              cd $GITHUB_WORKSPACE 
-              docker build -t test . 
-              curl -sfL  https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh  | sh -s -- -b /usr/local/bin v0.21.3 
-              trivy image test >> /tmp/trivy || true 
-    - uses: actions/upload-artifact@v3
+    - name: Brakeman-scan  
+      uses: artplan1/brakeman-action@v1.2.1
       with:
-         name: my-artifact
-         path: /tmp/trivy 
-
-    - name: docker-scan 
-      run : | 
-              docker scan test >> /tmp/scan || true 
-    - uses: actions/upload-artifact@v3
-      with:
-         name: my-artifact
-         path: /tmp/scan 
+       flags: "--o output.json || true"
