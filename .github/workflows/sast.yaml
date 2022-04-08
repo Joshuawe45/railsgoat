@@ -17,5 +17,5 @@ jobs:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
-          repository: joshua/rails-app 
+          repository: joshuawe45/rails-app 
           tags: latest
