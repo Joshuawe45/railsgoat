@@ -14,7 +14,7 @@ jobs:
     - name: Brakeman-scan  
       run : |
             cd $GITHUB_WORKSPACE 
-            gem install brakeman
+            sudo gem install brakeman
             brakeman -o output.json 
     - uses: actions/upload-artifact@v3
       if: always()
