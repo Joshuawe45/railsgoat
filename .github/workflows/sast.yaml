@@ -15,7 +15,17 @@ jobs:
       run : |
             cd $GITHUB_WORKSPACE 
             sudo gem install brakeman
-            brakeman -o output.json 
+            brakeman -o output.json || true 
+    - uses: actions/upload-artifact@v3
+      if: always()
+      with:
+         name: my-artifact
+         path: output.json # or path/to/artifact
+    - name: semgrep-scan  
+      run : |
+            cd $GITHUB_WORKSPACE 
+            python3 -m pip install semgrep
+            semgrep --config "p/ruby"
     - uses: actions/upload-artifact@v3
       if: always()
       with:
