@@ -1,18 +1,20 @@
-name: Secret Scanning 
+name: Dockerfile scanning 
 on: 
   push: 
     branches: [ master ] 
   pull_request: 
     branches: [ master ] 
 jobs: 
-  dast-scanning: 
+  container-scanning: 
     runs-on: ubuntu-latest 
-    name: Secret Scanning 
+    name: dockerfile  scanning 
     steps: 
     - name: Checkout the code 
       uses: actions/checkout@v2
-    - name: trufflehog-actions-scan
-      uses: edplato/trufflehog-actions-scan@master
- 
+    - name: SCAN the Dockerfile 
+      run : | 
+              cd $WORKSPACE
+              sudo wget -O /usr/bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64
+              sudo chmod +x /usr/bin/hadolint
+              hadolint Dockerfile
 
-        
