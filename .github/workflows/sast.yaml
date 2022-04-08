@@ -12,9 +12,10 @@ jobs:
     - name: Checkout the code 
       uses: actions/checkout@v2
     - name: Brakeman-scan  
-      uses: artplan1/brakeman-action@v1.2.1
-      with:
-       flags: "-o output.json "
+      run : |
+            cd $GITHUB_WORKSPACE 
+            gem install brakeman
+            brakeman -o output.json 
     - uses: actions/upload-artifact@v3
       if: always()
       with:
