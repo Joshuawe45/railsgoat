@@ -12,19 +12,18 @@ jobs:
     - name: Checkout the code 
       uses: actions/checkout@v2
     - name: Run Trivy vulnerability scanner
-      uses: aquasecurity/trivy-action@master
-      with:
-          image-ref: 'ghcr.io/joshuawe45/rails-app:latest'
-          format: 'sarif'
-          output: 'trivy-results.sarif'
-    - name: Upload Trivy scan results to GitHub Security tab
-      uses: github/codeql-action/upload-sarif@v1
-      with:
-          sarif_file: 'trivy-results.sarif'     
-    - name: docker-scan 
       run : | 
-              docker scan ghcr.io/joshuawe45/rails-app:latest >> /tmp/output
+              curl -sfL  https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh  | sh -s -- -b /usr/local/bin v0.21.3 
+              trivy image ghcr.io/joshuawe45/rails-app:latest >> /tmp/trivy 
     - uses: actions/upload-artifact@v3
       with:
          name: my-artifact
-         path: /tmp/output
+         path: /tmp/trivy 
+
+    - name: docker-scan 
+      run : | 
+              docker scan ghcr.io/joshuawe45/rails-app:latest >> /tmp/scan 
+    - uses: actions/upload-artifact@v3
+      with:
+         name: my-artifact
+         path: /tmp/scan 
