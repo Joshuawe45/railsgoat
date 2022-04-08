@@ -14,7 +14,9 @@ jobs:
     - name: SCAN the Dockerfile 
       run : | 
               cd $GITHUB_WORKSPACE 
-              docker run --rm -i ghcr.io/hadolint/hadolint < Dockerfile >> /tmp/output 
+              sudo wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64
+              sudo chmod +x /bin/hadolint
+              hadolint Dockerfile >> /tmp/output
     - uses: actions/upload-artifact@v3
       with:
          name: my-artifact
