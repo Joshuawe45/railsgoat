@@ -1,21 +1,30 @@
-name: Docker build 
+name: container-scanning 
 on: 
   push: 
     branches: [ master ] 
   pull_request: 
     branches: [ master ] 
 jobs: 
-  docker-build: 
+  container-scanning: 
     runs-on: ubuntu-latest 
-    name: Build 
+    name: container scanning 
     steps: 
     - name: Checkout the code 
       uses: actions/checkout@v2
-    - name: 'Build:dockerimage'
-      uses: docker/build-push-action@v1
+    - name: Run Trivy vulnerability scanner
+      uses: aquasecurity/trivy-action@master
       with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-          repository: joshuawe45/rails-app 
-          tags: latest
+          image-ref: 'ghcr.io/joshuawe45/rails-app:latest'
+          format: 'sarif'
+          output: 'trivy-results.sarif'
+    - name: Upload Trivy scan results to GitHub Security tab
+      uses: github/codeql-action/upload-sarif@v1
+      with:
+          sarif_file: 'trivy-results.sarif'     
+    - name: docker-scan 
+      run : | 
+              docker scan ghcr.io/joshuawe45/rails-app:latest >> /tmp/output
+    - uses: actions/upload-artifact@v3
+      with:
+         name: my-artifact
+         path: /tmp/output
