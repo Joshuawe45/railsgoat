@@ -25,9 +25,9 @@ jobs:
       run : |
             cd $GITHUB_WORKSPACE 
             python3 -m pip install semgrep
-            semgrep --config "p/ruby"
+            semgrep --config "p/ruby" --json -o semgrep.json
     - uses: actions/upload-artifact@v3
       if: always()
       with:
          name: my-artifact
-         path: output.json # or path/to/artifact
+         path: semgrep.json # or path/to/artifact
