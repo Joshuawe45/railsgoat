@@ -1,4 +1,4 @@
-name: dast 
+name: Secret Scanning 
 on: 
   push: 
     branches: [ master ] 
@@ -7,20 +7,12 @@ on:
 jobs: 
   dast-scanning: 
     runs-on: ubuntu-latest 
-    name: dast scanning 
+    name: Secret Scanning 
     steps: 
     - name: Checkout the code 
       uses: actions/checkout@v2
-    - name: SCAN the application 
-      run : | 
-              cd $GITHUB_WORKSPACE
-              docker-compose build
-              docker-compose run web rails db:setup
-              docker-compose up -d 
-    - name: ZAP Scan
-      uses: zaproxy/action-full-scan@v0.2.0
-      with:
-       target: 'http://localhost:3000/'
+    - name: trufflehog-actions-scan
+      uses: edplato/trufflehog-actions-scan@master
  
 
         
