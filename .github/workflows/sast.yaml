@@ -1,17 +1,23 @@
-name: Sca 
+name: Dockerfile scanning 
 on: 
   push: 
     branches: [ master ] 
   pull_request: 
     branches: [ master ] 
 jobs: 
-  bundler: 
+  container-scanning: 
     runs-on: ubuntu-latest 
-    name: bundler scan 
+    name: dockerfile  scanning 
     steps: 
     - name: Checkout the code 
       uses: actions/checkout@v2
-    - name: Install the bundler audit  
+    - name: SCAN the Dockerfile 
       run : | 
-           sudo gem install bundler-audit
-           bundle-audit || true
+              cd $GITHUB_WORKSPACE 
+              sudo wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64
+              sudo chmod +x /bin/hadolint
+              hadolint Dockerfile > /tmp/output || true 
+    - uses: actions/upload-artifact@v3
+      with:
+         name: my-artifact
+         path: /tmp/output # or path/to/artifact
