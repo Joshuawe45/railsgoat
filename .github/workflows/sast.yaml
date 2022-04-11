@@ -1,13 +1,13 @@
-name: Run the application
+name: dast 
 on: 
   push: 
     branches: [ master ] 
   pull_request: 
     branches: [ master ] 
 jobs: 
-  run-the-application: 
+  dast-scanning: 
     runs-on: ubuntu-latest 
-    name: Run
+    name: dast scanning 
     steps: 
     - name: Checkout the code 
       uses: actions/checkout@v2
@@ -17,3 +17,7 @@ jobs:
               docker-compose build
               docker-compose run web rails db:setup
               docker-compose up -d 
+    - name: ZAP Scan
+      uses: zaproxy/action-full-scan@v0.2.0
+      with:
+       target: 'http://localhost:3000/'
