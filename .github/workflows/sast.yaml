@@ -1,15 +1,17 @@
-name: Secret Scanning 
+name: Sca 
 on: 
   push: 
     branches: [ master ] 
   pull_request: 
     branches: [ master ] 
 jobs: 
-  dast-scanning: 
+  bundler: 
     runs-on: ubuntu-latest 
-    name: Secret Scanning 
+    name: bundler scan 
     steps: 
     - name: Checkout the code 
       uses: actions/checkout@v2
-    - name: trufflehog-actions-scan
-      uses: edplato/trufflehog-actions-scan@master
+    - name: Install the bundler audit  
+      run : | 
+           sudo gem install bundler-audit
+           bundle-audit || true
